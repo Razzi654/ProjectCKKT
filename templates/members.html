@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+    <section>
+        <div class="jumbotron">
+            <img src="{% static "img/top_weave.png" %}" alt="">
+
+            <h1>О Цикловой комиссии</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque, cum delectus, eius error
+                exercitationem expedita fugit magni mollitia reiciendis tempore tenetur ut. Aperiam distinctio
+                dolore eveniet exercitationem illum minima molestiae nam officiis praesentium quis.
+            </p>
+
+            <p>
+                Ab adipisci aliquam aliquid cum dolorum earum eos ex id impedit magni, molestias nam nulla,
+                numquam obcaecati, quae ratione vitae voluptas. Alias est ex laborum maxime obcaecati quis,
+                vitae voluptatibus! At ea ex harum ipsam maiores natus neque qui rem repudiandae!
+            </p>
+
+            <img src="{% static "img/bot_weave.png" %}" alt="">
+        </div><!-- /.jumbotron -->
+
+        <h1>Состав Цикловой комиссии "Компьютерных технологий"</h1>
+
+        <hr class="featurette-divider">
+
+        {% for obj in objectList %}
+
+            <div class="row">
+                <div class="col-md order-lg-2">
+                    {{ obj.name | safe }}
+                    {{ obj.position | safe }}
+                </div><!-- /.col-md order-lg-2 -->
+
+                <div class="col-md-3 order-lg-1">
+                    <img class="photo" src="{{ obj.photo.url }}" alt="{{ obj.photo.name }}">
+                </div><!-- /.col-md-3 order-lg-1 -->
+            </div><!-- /.row -->
+
+            <hr class="featurette-divider">
+
+        {% endfor %}
+    </section>
+
+{% endblock %}

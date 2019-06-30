@@ -1,0 +1,230 @@
+﻿html { font-size: 14px; }
+
+body {
+	background: url("../img/background/3147.jpg") no-repeat center /cover;
+	/*rgba(109, 108, 108, 0.35)*/
+	/*font-family: 'Philosopher', sans-serif;*/
+	font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+	margin-top: 5rem;
+	}
+
+section {
+	background-color: #fff;
+	padding: 1em 2.5em 1em 2.5em;
+	margin: 1em 0 1em 0;
+	border-radius: 10px;
+	}
+
+.spec { font-size: 1.1em; }
+
+.spec li {
+	list-style-type: none;
+	font-size: 1.25rem;
+	}
+
+.spec li:before { content: "⮚ "; }
+
+ol { font-size: 1.2em;}
+
+.nav-link::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	transform: translateY(25px) scale(0);
+	transition: all 0.2s;
+	}
+
+.nav-link:hover { text-decoration: none; }
+
+.nav-link:hover::after { transform: translateY(1.73rem) scale(1); }
+
+h1, h2, h3, h4, h5, h6 { text-align: center; }
+
+h1 {
+	font-size: 2.25em;
+	padding-bottom: .5em;
+	margin-top: 2rem;
+	}
+
+h2 {
+	font-size: 1.9em;
+	font-weight: normal;
+	margin: .75rem 0 .75rem 0;
+	}
+
+h4 { font-size: 1.4rem; }
+
+p {
+	font-size: 1.20em;
+	text-indent: 40px;
+	}
+
+.container img { width: 100%; }
+
+table {
+	border-collapse: separate;
+	border: 2px solid black;
+	border-spacing: 4px;
+	margin-bottom: 2rem;
+	width: 100%;
+	}
+
+caption {
+	caption-side: top;
+	font-size: 18px;
+	}
+
+th {
+	padding: 10px;
+	border: 1px solid black;
+	}
+
+td {
+	padding: 5px 30px 5px 5px;
+	border: 1px solid lightgray;
+	}
+
+footer {
+	/*font-size: 1.15em;*/
+	line-height: 1.6;
+	/*color: rgba(216, 216, 216, 0.94);*/
+	margin-top: 1em;
+	border-radius: 10px;
+	background: url("../img/background/M-D Dark.jpg") no-repeat 50%  /cover;
+	}
+
+footer .container {
+	background: rgba(0, 0, 0, 0.62);
+	padding: 1em 0 1em 0;
+	border-radius: 10px;
+	}
+
+footer p {
+	font-size: .9em;
+	margin-right: 17px;
+	}
+
+footer h4 {
+	font-size: 1.3em;
+	color: rgba(255, 255, 255, 0.85);
+	text-shadow: 4px 1px 18px rgba(255, 255, 255, 0.52),
+	#6f6464 1px 1px 0, #d0c5c5 -1px -1px 0,
+	rgba(0, 0, 0, 0.59) -1px 1px 0,
+	rgba(156, 156, 156, 0.82) 1px -1px 0;
+	letter-spacing: 0.04rem;
+	}
+
+footer a {
+	color: #74a5dacf;
+	}
+
+footer a:hover {
+	color: white;
+	text-decoration: none;
+	}
+
+footer li {
+	color: #fff;
+}
+
+footer li:before{
+	color: #fff;
+}
+
+footer .col-6 p,a {
+	font-size: 1.1rem;
+}
+
+
+footer .col-6 p {
+	color: #fff;
+}
+
+.contacts {
+	line-height: 2.5;
+	font-size: 1.15em;
+	}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+#myCarousel {
+	border: #fff 2px solid;
+	box-shadow: 0 0 14px 6px rgba(145, 145, 145, 0.88);
+	}
+
+.btn { text-indent: 0; }
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+	z-index: 10;
+	bottom: 3rem;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 0 1rem 1rem 1rem;
+	}
+
+.carousel-caption p { text-indent: 0; }
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+	height: 35rem;
+	background-color: #777;
+	}
+
+.carousel-item img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*min-width: 100%;
+	height: 100%;*/
+	}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing { text-align: justify; }
+
+.marketing .col-lg-4 {
+	margin-bottom: 1.5rem;
+	text-align: center;
+	}
+
+.marketing .col-lg-4 p {
+	margin-right: .75rem;
+	margin-left: .75rem;
+	}
+
+.marketing .col-sm { display: inline-block; }
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+	margin: 2rem 0 2rem 0; /* Space out the Bootstrap <hr> more */
+	background-color: rgba(241, 242, 243, 0.31);
+	}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+	/* Bump up size of carousel content */
+	.carousel-caption p {
+		margin-bottom: 1.25rem;
+		font-size: 1.25rem;
+		line-height: 1.4;
+		}
+	
+	.featurette-heading {
+		font-size: 45px;
+		text-align: center;
+		}
+	}
+
+@media (min-width: 62em) {
+	.featurette-heading {
+		margin-top: 4rem;
+		}
+	}

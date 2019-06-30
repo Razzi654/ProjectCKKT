@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <section>
+        {% for news in objectList %}
+            <div>
+                <h2>{{ news.title }}</h2>
+                <p>Дата публикации: {{ news.creationDate }} &nbsp Дата последнего изменения: {{ news.changingDate }}</p>
+                {{ news.article | safe }}
+            </div>
+
+            <hr class = "featurette-divider">
+        {% endfor %}
+    </section>
+
+{% endblock %}
