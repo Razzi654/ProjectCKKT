@@ -77,9 +77,12 @@ def work(request):
 
 def members(request):
     query = CommissionMembers.objects.all
+    client_id = CommissionMembers.objects.order_by('-id').values('id')[:1]
+    photo = CommissionMembers.objects.filter(id=client_id)
     content = {
         "title": "Members of the CKKT",
         "objectList": query,
+        "photo": photo,
     }
     return render(request, "members.html", content)
 

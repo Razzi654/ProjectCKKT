@@ -45,5 +45,9 @@
 
         {% endfor %}
     </section>
-
+    {% for i in photo %}
+    <div class="col-md-3 order-lg-1">
+        <img class="photo" src="{{ i.photo.url }}" alt="">
+    </div><!-- /.col-md-3 order-lg-1 -->
+    {% endfor %}
 {% endblock %}
